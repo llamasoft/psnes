@@ -367,12 +367,6 @@ int PSNESGuiEmu::update() {
     if (((players[0].state & Input::Key::KEY_START) && (players[0].state & Input::Key::KEY_COIN))) {
         pause();
         return UI_KEY_SHOW_MEMU_ROM;
-    } else if (((players[0].state & Input::Key::KEY_START) && (players[0].state & Input::Key::KEY_FIRE5))
-               || ((players[0].state & Input::Key::KEY_COIN) && (players[0].state & Input::Key::KEY_FIRE5))
-               || ((players[0].state & Input::Key::KEY_START) && (players[0].state & Input::Key::KEY_FIRE6))
-               || ((players[0].state & Input::Key::KEY_COIN) && (players[0].state & Input::Key::KEY_FIRE6))) {
-        pause();
-        return UI_KEY_SHOW_MEMU_ROM;
     }
 
     // look each players for combos keys
